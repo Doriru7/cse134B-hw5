@@ -5,36 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
     <style>
-        .left {
-            height: 100%;
-            float:left;
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            padding: 10px;
+            --border: 3px solid;
+            
         }
+
+        .grid-item {
+            --border: 3px solid;
+            background-color:darkgrey;
+            padding: 30px;
+            margin: 50px;
+            text-align: center;
+        }
+
+        main ul {
+            list-style: none;
+        }
+
+        /*css transition*/
+        .grid-item:hover {
+            font-size: x-large;
+            transition-duration: 0.5s;
+        }
+
+        main > h1{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: xx-large;
+            color: bisque;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;   
+        }
+
+        @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .grid-container {
+            grid-template-columns: auto auto auto;
+        }
+
+        .grid-item {
+            padding: 100px;
+        }
+
+}
+
     </style>
+
 </head>
 <body>
-    <div class="left">
-        <a href="index.html">
-            <picture>
-                <img src="img/horse.jpg", alt="horse">
-            </picture>
-        </a>
+    <header class="navbar" >
+        <h1>
+            <a href="/index.html">
+                Hao Cheng
+            </a>
+        </h1>
+        
         <nav>
             <ul>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="experiment.html">Experiment</a></li>
-            </ul>
+                <li><a class="navbar-item" href="contact.html">Contact</a></li>
+                <li><a class="navbar-item" href="project.html">Project</a></li>
+                <li><a class="navbar-item" href="education.html">Education</a></li>
+            </ul>    
         </nav>
-    </div>
-    <div>
-        <b><em>Project</em></b> 
-        <ul>
-            <li>project1</li>
-            <li>project2</li>
-            <li>project3</li>
+    </header>
+
+    <main>
+        <h1>Project</h1>
+   
+        <ul class="grid-container">
+            <li class="grid-item">project1</li>
+            <li class="grid-item">project2</li>
+            <li class="grid-item">project3</li>
+            <li class="grid-item">project4</li>
+            <li class="grid-item">project5</li>
+            <li class="grid-item">project6</li>
+
         </ul>
-    </div>
+        
+        
+    </main>
+    <footer>
+        <a target="_blank" href="https://icons8.com/icon/HAUEex9XtCwy/homer-simpson">Homer Simpson</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </footer>
 </body>
 </html>

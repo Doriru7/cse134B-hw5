@@ -1,0 +1,179 @@
+/*css variables*/
+:root {
+    --blue: steelblue;
+    --white: whitesmoke;
+    
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+/*custom fonts*/
+@font-face {
+    font-family: myFirstFont;
+    src: url(font/font1.otf);
+}
+
+body {
+    background-color: var(--blue);
+
+}
+
+/*responsive web design*/
+
+/*for mobile phones*/
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .navbar {
+        --border: 3px solid;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar nav {  /* ??? */
+        display: block;
+
+        flex: 1;           
+        text-align: right;
+        --margin-right: 50px;
+    }
+
+    .navbar nav a {
+        
+        --border: 2px solid;
+        float: right;
+        margin-right: 50px;
+    
+    }
+
+}
+
+
+/*header*/
+.navbar {
+   /* display: grid;
+    grid-template-columns: 3fr 5fr repeat(4, 1fr);
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+    text-align: left;
+    background-color: var(--white);
+    line-height: normal;
+    gap: 5px;
+    */
+    
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    margin-right: -0.5rem;
+    align-items: center;
+    background-color: var(--white);
+
+}
+
+.navbar > h1 {
+    font-family: myFirstFont, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --border: 3px solid;
+    margin: 10px;
+}
+
+/*css transform*/
+.navbar > h1:hover {
+    font-size: x-large;
+    transition-duration: 1s;
+}
+
+.navbar nav {
+    margin: 10px;
+    --border: 3px solid;
+
+}
+
+.navbar nav ul {
+    list-style: none;
+    --border: 3px solid;
+}
+
+.navbar nav ul li {
+    
+    margin-right: 0;
+}
+
+.navbar nav a {
+    display:block;
+    text-decoration: none;
+    text-align: right;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: 500;
+    --border: 3px solid;
+    margin: 10px;
+}
+
+/*css transition*/
+.navbar nav a:hover {
+    color:crimson;
+    transition-duration: 0.2s;
+}
+
+/*css animation*/
+@keyframes rise {
+    from {top: 0px;}
+    to   {top: -30px;}
+}
+
+/*main*/
+.main-container {
+
+    --border: 3px solid;
+    padding: 20px;
+    
+}
+.main-container::after {
+    /*spacer to prevent main-container from collapsing*/
+    content: "";
+    clear: both;
+    display: block;
+}
+.main-container > * {
+    float: left;
+    text-align: justify;
+    padding: 50px 100px;
+    --border: 3px solid;
+}
+
+.character-up:hover {
+    position: relative;
+    animation-name: rise;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+} 
+
+img {
+    display: block;
+    filter: drop-shadow(4px 4px 5px gray) brightness(120%);
+    --filter: blur();
+    margin-left: auto;
+    margin-right: auto;
+    
+}

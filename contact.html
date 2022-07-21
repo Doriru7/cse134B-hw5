@@ -5,50 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
     <style>
-        .left {
-            float:left;
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+            padding: 10px;
         }
+
+        .grid-item {
+            padding: 20px;
+            
+        }
+
+        fieldset:nth-of-type(2) {
+            display:block;
+            
+            
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        main form {
+            margin: 50px;
+            --border: 3px solid;
+            background-color:bisque;
+
+        }
+
+        .submit {
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            --border: 3px solid;
+            font-size: xx-large;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: 768px) {
+        /* For desktop:*/ 
+        form {
+            margin: 200px;
+            
+        }
+
+        .grid-item {
+            width: 50%;
+            margin: auto;
+        }
+        
+        fieldset:nth-of-type(1) > label {
+            margin-left: 25%;
+        }
+    }
+
+       
     </style>
 </head>
 <body>
-    <div class="left">
-        <a href="index.html">
-            <picture>
-                <img src="img/horse.jpg", alt="horse">
-            </picture>
-        </a>
+    <header class="navbar" >
+        <h1>
+            <a href="/index.html">
+                Hao Cheng
+            </a>
+        </h1>
+        
         <nav>
             <ul>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="experiment.html">Experiment</a></li>
-            </ul>
+                <li><a class="navbar-item" href="contact.html">Contact</a></li>
+                <li><a class="navbar-item" href="project.html">Project</a></li>
+                <li><a class="navbar-item" href="education.html">Education</a></li>
+            </ul>    
         </nav>
-    </div>
-    <form action="">
-        <fieldset>
-            <legend>Info</legend>
-            <label for="name">Your name:</label>
-            <input type="text" id="name">
-            <br>
-            <label for="email">Email</label>
-            <input type="text" id="email">
-            <br>
-            <label for="recruiter">Are you a recruiter:</label>
-            <input list="yesOrNo" name="recruiter" id="recruiter">
-            <datalist id="yesOrNo">
-              <option value="Yes">
-              <option value="No">
-            </datalist>
-        </fieldset>
-       <fieldset>
-        <legend>message</legend>
-            <textarea name="message" id="message" cols="100" rows="10"></textarea>
-       </fieldset>
-        <input type="submit">
-    </form>
+    </header>
+
+    <main>
+        <form action="" method="">
+            <fieldset class="grid-container">
+                <legend>Info</legend>
+                <label for="first-name">Frist name:</label>
+                <input class="grid-item" type="text" name="first-name" id="first-name">
+                
+                <label for="last-name">Last name:</label>
+                <input class="grid-item" type="text" name="last-name" id="last-name">
+
+                <label for="email">Email:</label>
+                <input class="grid-item" type="email" name="email" id="email">
+
+                <label for="phone">Phone:</label>
+                <input class="grid-item" type="text" name="phone" id="phone">
+                
+               <!--<label for="recruiter">Are you a recruiter:</label>
+                <input list="yesOrNo" name="recruiter" id="recruiter">
+                <datalist id="yesOrNo">
+                  <option value="Yes">
+                  <option value="No">
+                </datalist>--> 
+            </fieldset>
+           <fieldset>
+            <legend>message</legend>
+                <textarea name="message" id="message" rows="10"></textarea>
+           </fieldset>
+            <input class="submit" type="submit">
+        </form>
+    </main>
+    <footer>
+        <a target="_blank" href="https://icons8.com/icon/HAUEex9XtCwy/homer-simpson">Homer Simpson</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </footer>
 
     
 
