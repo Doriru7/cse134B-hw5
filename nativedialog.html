@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Native Dialog</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
+</head>
+<body>
+    
+    <button id="alert">Alert</button>
+    <br>
+    <button id="confirm">Confirm</button>
+    <br>
+    <button id="prompt">Prompt</button>
+    <br>
+    <button id="safer_prompt">Safer Prompt</button>
+    <br>
+    <button id="custom">Custom</button>
+    <br>
+    <output id="output"></output>
+    <dialog id="my_dialog">
+        <p>This is a custom dialog</p>
+        <input type="text" id="custom_input">
+        <button id="close">Close</button>
+    </dialog>
+
+<script>
+    //alert
+    const element_alert = document.getElementById('alert');
+    element_alert.addEventListener('click', alert_function);
+
+    function alert_function() {
+        alert('alert!!!');
+    } 
+
+    const element_output = document.getElementById('output');
+
+    //confirm
+    const element_confirm = document.getElementById('confirm');
+    element_confirm.addEventListener('click', confirm_function);
+
+    function confirm_function() {
+        let confirm_text = 'Do you confirm this?';
+        let output_value = "";
+
+        if(confirm(confirm_text) == true)
+            output_value = 'true';
+        else
+            output_value = 'false';
+            
+        element_output.innerHTML = 'Confirm result: ' + output_value;
+    } 
+    //prompt
+    const element_prompt = document.getElementById('prompt');
+    element_prompt.addEventListener('click', prompt_function);
+
+    function prompt_function() {
+        let input = prompt('Please enter input');
+        if(input != null) {
+            element_output.innerHTML = 'Prompt result: ' + input;
+        } else {
+            element_output.innerHTML = 'Prompt result: ' + `User didn't enter anything`;
+        }
+    }
+    //safer prompt
+    const element_saferprompt = document.getElementById('safer_prompt');
+    element_saferprompt.addEventListener('click', saferprompt_function);
+
+    function saferprompt_function() {
+        let input = prompt('Please enter input')
+        let clean = DOMPurify.sanitize(input);
+        if(input != null) {
+            element_output.innerHTML = 'Prompt result: ' + clean;
+        } else {
+            element_output.innerHTML = 'Prompt result: ' + `User didn't enter anything`;
+        }
+    }
+</script>
+
+<script type="module">
+    //part2
+    import{showDialog} from './customdialog.js';
+    let element_custom = document.getElementById('custom');
+    element_custom.addEventListener('click', custom_function);
+
+    function custom_function() {
+        let user_input = showDialog();
+        alert(user_input);
+    }
+
+</script>
+</body>
+</html>

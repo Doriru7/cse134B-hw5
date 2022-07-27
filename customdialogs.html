@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dialogs</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
+    <script type="module" src="./cd.js"></script>
+</head>
+<body>
+    
+    <button id="alert">Alert</button>
+    <br>
+    <button id="confirm">Confirm</button>
+    <br>
+    <button id="prompt">Prompt</button>
+    <br>
+    <output id="output"></output>
+
+    <!--
+    <template id="alert_template">
+        <dialog id="alert_dialog">
+            <p id="alert_dialog_text"></p>
+            <form id="alert_form" method="dialog">
+                <button id="alert_ok">Ok</button>
+            </form>
+            
+        </dialog>
+    </template>
+
+    <template id="confirm_template">
+        <dialog id="confirm_dialog">
+            <p id="confirm_dialog_text"></p>
+            <form id="confirm_form" method="dialog">
+                <button id="confirm_cancel" value="false">Cancel</button>
+                <button id="confirm_ok" value="true">Ok</button>
+            </form>
+            
+        </dialog>
+    </template>
+
+    <template id="prompt_template">
+        <dialog id="prompt_dialog">
+            <p id="prompt_dialog_text"></p>
+            <input type="text" id="prompt_textfield">
+            <button id="prompt_cancel">Cancel</button>
+            <button id="prompt_ok">Ok</button>
+        </dialog>
+    </template>
+-->
+    <template id="dialog_template">
+        <dialog id="custom_dialog">
+            <p id="prompt_text"></p>
+            <form method="dialog"></form>
+        </dialog>
+    </template>
+
+<script>
+    //alert
+   /* const element_alert = document.getElementById('alert');
+    element_alert.addEventListener('click', alert_function);
+
+    function alert_function() {
+        //to do....................
+    } 
+
+    const element_output = document.getElementById('output');
+
+    //confirm
+    const element_confirm = document.getElementById('confirm');
+    element_confirm.addEventListener('click', confirm_function);
+
+    function confirm_function() {
+        //to do..
+    } 
+    //prompt
+    const element_prompt = document.getElementById('prompt');
+    element_prompt.addEventListener('click', prompt_function);
+
+    function prompt_function() {
+        //to do...
+    } */
+    
+</script>
+
+
+
+
+
+    
+    
+
+</body>
+</html>
