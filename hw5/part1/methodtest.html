@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Test</title>
+    <script src="./part1.js"></script>
+    <style>
+        #response {
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>It's HTTP Time!</h1>
+<form id="test_form">
+
+    <div>
+        <label for="id">ID: </label>
+        <input type="number" name="id" id="id">
+    </div>
+
+    <div>
+        <label for="article_name">Title: </label>
+        <input type="text" name="article_name" id="article_name">
+    </div>
+
+    <div>
+        <label for="article_body">Body</label>
+        <textarea name="article_body" id="article_body" cols="30" rows="10"></textarea>
+    </div>
+
+    <div>
+        <button type="button" id="post-btn">Post</button>
+        <button type="button" id="get-btn">Get</button>
+        <button type="button" id="put-btn">Put</button>
+        <button type="button" id="delete-btn">Delete</button>
+
+    </div>
+
+    <fieldset>
+    <legend>Response</legend>
+
+    <output id="response" name="response"></output>
+
+    </fieldset>
+
+</form>
+
+</body>
+</html>
