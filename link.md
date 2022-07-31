@@ -1,5 +1,3 @@
-part 1  https://lighthearted-mochi-8057ed.netlify.app/nativedialog.html
+part 1  https://fabulous-torrone-191327.netlify.app/hw5/part1/methodtest.html
 
-part 2  https://lighthearted-mochi-8057ed.netlify.app/customdialogs.html
-
-part 3&4 https://lighthearted-mochi-8057ed.netlify.app/crud.html
+part 2  https://fabulous-torrone-191327.netlify.app/hw5/part2/webcomponent.html
